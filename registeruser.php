@@ -36,7 +36,7 @@
 
 User Register</h1>
 
-<form action='/~kejebi/webtechproject/registeruser.php' method="POST" onsubmit='return validateForm()'>
+<form action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="POST" onsubmit='return validateForm()'>
 
 
 <div class="form-group">
@@ -90,7 +90,7 @@ User Register</h1>
 <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
                 </div>
-                <p>Already have an account? <a href="signin.php">Sign in here</a>.</p>
+                <p>Already have an account? <a href="login.php">Sign in here</a>.</p>
                 <p id = "registerAlert"></p>
 </form>
 </div>

@@ -5,6 +5,7 @@
         <meta name="author" content="Group:404NotFound">
         <title>Health Monitoring Website</title>
         <link rel="stylesheet" href="styles/prelogin.css">
+        <script src="js/doctorvalidate.js"></script>
     </head>
     <body>
     <link 
@@ -35,7 +36,14 @@
 
 Doctor Register</h1>
 
-<form action='/~kejebi/webtechproject/registerdoctor.php' method="POST">
+<form action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="POST" onsubmit='return validateForm()'>
+
+<div class="form-group">
+<label> DOCTORS ID * </label>
+
+<input name="did" type="text" placeholder="ENTER YOUR DOCTOR'S ID" id="did" required><br>
+       
+</div>
 
 <div class="form-group">
                 <label>USERNAME *</label><br>
@@ -88,7 +96,9 @@ Doctor Register</h1>
 <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
                 </div>
-                <p>Already have an account? <a href="signin.php">Sign in here</a>.</p>
+               
+                <p>Already have an account? <a href="login.php">Sign in here</a>.</p>
+                <p id = "registerAlert"></p>
 </form>
 </div>
           </div>

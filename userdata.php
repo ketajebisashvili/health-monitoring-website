@@ -5,6 +5,7 @@
         <meta name="author" content="Group:404NotFound">
         <title>Health Monitoring Website</title>
         <link rel="stylesheet" href="styles/postlogin.css">
+        <script src="js/datavalidate.js"></script>
     </head>
     <body>
     <link 
@@ -60,17 +61,17 @@
 </div>
 
 <div id="form">
-    
+<form action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="POST" onsubmit='return validateForm()'>
   <p> 
   <h2>Add Data<h2>
   <div class="form-group">
 <label> Date: * </label> <br>
-<input name="datadate" type="date"  max="3000-01-01" onfocus="this.max=new Date().toISOString().split('T')[0]"  id ="birthdate" required><br>
+<input name="datadate" type="date"  max="3000-01-01" onfocus="this.max=new Date().toISOString().split('T')[0]"  id ="date" required><br>
 </div>
 
 <div class="form-group">
 <label> Enter Doctor's ID if you want to share:  </label> <br>
-<input name="doctorid" type="text" placeholder="Doctor's ID" id="doctorid"><br> 
+<input name="did" type="text" placeholder="Doctor's ID" id="did"><br> 
 </div>
 <div class="form-group">
 <label> Temperature * </label> <br>
@@ -93,5 +94,8 @@
 
 </div>
 </p>
+<p id = "dataAlert"></p>
+</form>
 </div>
+
 </body>
