@@ -12,7 +12,7 @@
   rel="stylesheet"  type='text/css'>
 <nav>
             <div class="left">
-                <img src="/img/logo.png" alt="logo" width="100px"> 
+                <img src="img/logo.jpg" alt="logo" width="100px"> 
             </div>
             <div class="right">
                 <ul>
@@ -28,35 +28,19 @@
         <aside id="sidebar">
                 <ul id="sidemenu" class="sidebar-nav">
                     <li>
-                        <a href="/userhome.php" class="active">
+                        <a href="userhome.php" class="active">
                             <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span>
                             <span class="sidebar-title">Dashboard</span>
                         </a>
                     </li>
+                    
                     <li>
-                        <a href="/profile.php" class="active">
-                            <span class="sidebar-icon"><i class="fa fa-pencil-square-o"></i></span>
-                            <span class="sidebar-title">Profile</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/data.php" class="active">
+                        <a href="userdata.php" class="active">
                             <span class="sidebar-icon"><i class="fa fa-pencil-square-o"></i></span>
                             <span class="sidebar-title">View/Add Data</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="/document.php" class="active">
-                            <span class="sidebar-icon"><i class="fa fa-pencil-square-o"></i></span>
-                            <span class="sidebar-title">Add Document</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/appointment.php" class="active">
-                            <span class="sidebar-icon"><i class="fa fa-pencil-square-o"></i></span>
-                            <span class="sidebar-title">Make an Appointment</span>
-                        </a>
-                    </li>
+                    
                 </ul>
             </aside>
 </div>

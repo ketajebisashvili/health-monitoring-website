@@ -12,7 +12,7 @@
   rel="stylesheet"  type='text/css'>
     <nav>
             <div class="left">
-                <img src="/img/logo.png" alt="logo" width="100px">
+                <img src="img/logo.jpg" alt="logo" width="100px">
             </div>
             <div class="right">
                 <ul>
@@ -29,13 +29,13 @@
         <div class="box" id="registerFormDoctor">
         <div class="header">
 <h1>
-<img src="img/logo.png" width="100px" />
+
       
 <i class="fa fa-user" aria-hidden="true"></i>
 
 Doctor Register</h1>
 
-<form action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>' method="POST">
+<form action='/~kejebi/webtechproject/registerdoctor.php' method="POST">
 
 <div class="form-group">
                 <label>USERNAME *</label><br>
@@ -49,7 +49,7 @@ Doctor Register</h1>
 <div class="form-group">
 <label> EMAIL * </label>
 
-<input name="email" type="email" placeholder="Enter a valid email address" id="email" required><br>
+<input name="email" type="email" placeholder="YOUR EMAIL" id="email" required><br>
        
 </div>
 

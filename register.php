@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,7 +13,7 @@
   rel="stylesheet"  type='text/css'>
         <nav>
             <div class="left">
-                <img src="/img/logo.png" alt="logo" width="100px">
+                <img src="img/logo.jpg" alt="logo" width="100px">
             </div>
             <div class="right">
                 <ul>
@@ -27,8 +28,8 @@
      <div clas="content">
        <h1>  User Type </h1>
             <div clas="buttons">
-             <a href="/userregister.php" class="btn1">User</a> 
-             <a href="/doctorregister.php" class="btn2">Doctor</a>
+             <a href="registeruser.php" class="btn1">User</a> 
+             <a href="registerdoctor.php" class="btn2">Doctor</a>
              </div>
       </div>
        

@@ -12,7 +12,7 @@
   rel="stylesheet"  type='text/css'>
         <nav>
             <div class="left">
-                <img src="/img/logo.png" alt="logo" width="100px">
+                <img src="img/logo.jpg" alt="logo" width="100px">
             </div>
             <div class="right">
                 <ul>
@@ -30,7 +30,7 @@
 
 <div class="header">
   <h1>
-  <img src="img/logo.png" alt="logo" width="100px"/>
+  
   <i class="fa fa-user" aria-hidden="true"></i>
   
   Sign In</h1>

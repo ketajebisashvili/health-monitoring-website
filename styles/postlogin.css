@@ -44,7 +44,7 @@ nav{
 }
 
 .left{
-   margin-top:30px;
+   mix-blend-mode: multiply;  
   float: left;
   margin-left:100px;
 }
@@ -138,10 +138,23 @@ body {
 
 
 p{
-  margin-left:14em;
+  margin-left:30em;
    background: white;
   padding: 15px;
   border-radius: 3px;
-  margin-left:14em;
+  
   margin-right:3em;
+}
+
+.form-group{
+ margin-left:30em;
+
+}
+
+input {
+    display: block;
+    box-sizing: border-box;
+    width: 20%;
+    outline: none;
+    margin:0;
 }

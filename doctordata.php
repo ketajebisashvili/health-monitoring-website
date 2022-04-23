@@ -12,7 +12,7 @@
   rel="stylesheet"  type='text/css'>
 <nav>
             <div class="left">
-                <img src="/img/logo.png" alt="logo" width="100px">
+                <img src="img/logo.jpg" alt="logo" width="100px">
             </div>
             <div class="right">
                 <ul>
@@ -33,30 +33,14 @@
                             <span class="sidebar-title">Dashboard</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="/doctorprofile.php" class="active">
-                            <span class="sidebar-icon"><i class="fa fa-pencil-square-o"></i></span>
-                            <span class="sidebar-title">Profile</span>
-                        </a>
-                    </li>
+                    
                     <li>
                         <a href="/doctordata.php" class="active">
                             <span class="sidebar-icon"><i class="fa fa-pencil-square-o"></i></span>
                             <span class="sidebar-title">Shared Data</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="/doctordocument.php" class="active">
-                            <span class="sidebar-icon"><i class="fa fa-pencil-square-o"></i></span>
-                            <span class="sidebar-title">Shared  Documents</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/doctorappointment.php" class="active">
-                            <span class="sidebar-icon"><i class="fa fa-pencil-square-o"></i></span>
-                            <span class="sidebar-title"> Appointment Requests</span>
-                        </a>
-                    </li>
+                    
                 </ul>
             </aside>
 </div>

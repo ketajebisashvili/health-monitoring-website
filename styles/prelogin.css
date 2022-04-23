@@ -42,7 +42,7 @@ nav{
 }
 
 .left{
-   margin-top:30px;
+   mix-blend-mode: multiply;
   float: left;
   margin-left:100px;
 }
