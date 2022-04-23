@@ -25,9 +25,9 @@
             
 
         </nav>
-     <div clas="content">
+     <div class="content">
        <h1>  User Type </h1>
-            <div clas="buttons">
+            <div class="buttons">
              <a href="registeruser.php" class="btn1">User</a> 
              <a href="registerdoctor.php" class="btn2">Doctor</a>
              </div>

@@ -16,7 +16,7 @@
             </div>
             <div class="right">
                 <ul>
-                <i class="fa fa-sign-out" aria-hidden="true"></i> <a href="logout.php">Log out</a> 
+                <a href="logout.php">Log out</a> 
                 </ul>
             </div>
             
@@ -47,10 +47,9 @@
 
 <div id="header">
     <h1>
-    
-    <i class="fa-solid fa-bed"></i> Doctor Dashboard
+     Doctor Dashboard
    
-    
+     </h1>
 
     </div>
     
@@ -58,6 +57,6 @@
    <p> welcome doctor! </p>
 </div>
 
-</h1>
+
 </div>
 </body>

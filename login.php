@@ -24,7 +24,7 @@
             
 
         </nav>
-       <div class="wrapper">
+<div class="wrapper">
         <form method="post" action="signin.php">
 <div class="box" id="loginForm">
 
@@ -43,7 +43,9 @@
 <input name="password" type="password" placeholder="password" id="password" required><br>
 <button type="submit" class="btn" name="login_user">Login</button>
 </div>
-          </div>
+</form>
+</div>
+
 <footer>
     <p>ICS0008 Project</p>
 </footer>

@@ -16,7 +16,7 @@
             </div>
             <div class="right">
                 <ul>
-                <i class="fa fa-sign-out" aria-hidden="true"></i> <a href="logout.php">Log out</a> 
+                <a href="logout.php">Log out</a> 
                 </ul>
             </div>
             
@@ -28,14 +28,14 @@
         <aside id="sidebar">
                 <ul id="sidemenu" class="sidebar-nav">
                     <li>
-                        <a href="/doctorhome.php" class="active">
+                        <a href="doctorhome.php" class="active">
                             <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span>
                             <span class="sidebar-title">Dashboard</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="/doctordata.php" class="active">
+                        <a href="doctordata.php" class="active">
                             <span class="sidebar-icon"><i class="fa fa-pencil-square-o"></i></span>
                             <span class="sidebar-title">Shared Data</span>
                         </a>
@@ -50,7 +50,7 @@
     
     <i class="fas fa-file"></i> Patient's Data
    
-    
+    </h1>
 
     </div>
     
@@ -59,6 +59,6 @@
        <p> fetch data from database </p>
 </div>
 
-</h1>
+
 </div>
 </body>

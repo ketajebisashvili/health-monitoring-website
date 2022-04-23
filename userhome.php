@@ -28,37 +28,38 @@
         <aside id="sidebar">
                 <ul id="sidemenu" class="sidebar-nav">
                     <li>
-                        <a href="userhome.php" class="active">
-                            <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span>
+                        <a href="/userhome.php" class="active">
+                            <span class="sidebar-icon"></span>
                             <span class="sidebar-title">Dashboard</span>
                         </a>
                     </li>
-                    
+                  
                     <li>
-                        <a href="userdata.php" class="active">
-                            <span class="sidebar-icon"><i class="fa fa-pencil-square-o"></i></span>
+                        <a href="/userdata.php" class="active">
+                            <span class="sidebar-icon"></span>
                             <span class="sidebar-title">View/Add Data</span>
                         </a>
                     </li>
-                    
+                   
                 </ul>
             </aside>
 </div>
 
 <div id="header">
     <h1>
-    <div id="headerLeft">
+  
     <i class="fa-solid fa-bed"></i> User Profile
    
     
 
-    </div>
-    <div id="headerRight">
+ 
     <a href="document.php">Add Document</a> 
+
+
+</h1>
 </div>
 <div id="content">
    <p> User Data Table </p>
 </div>
-</h1>
-</div>
+
 </body>

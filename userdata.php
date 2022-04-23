@@ -16,7 +16,7 @@
             </div>
             <div class="right">
                 <ul>
-                <i class="fa fa-sign-out" aria-hidden="true"></i> <a href="logout.php">Log out</a> 
+                 <a href="logout.php">Log out</a> 
                 </ul>
             </div>
             
@@ -29,14 +29,14 @@
                 <ul id="sidemenu" class="sidebar-nav">
                     <li>
                         <a href="userhome.php" class="active">
-                            <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span>
+                            <span class="sidebar-icon"></span>
                             <span class="sidebar-title">Dashboard</span>
                         </a>
                     </li>
                     
                     <li>
                         <a href="userdata.php" class="active">
-                            <span class="sidebar-icon"><i class="fa fa-pencil-square-o"></i></span>
+                            <span class="sidebar-icon"></span>
                             <span class="sidebar-title">View/Add Data</span>
                         </a>
                     </li>
@@ -47,15 +47,15 @@
 
 <div id="header">
     <h1>
-    <div id="headerLeft">
-    <i class="fas fa-file"></i> Doctor's Appointment
+    
+    Doctor's Appointment
      
     
 
-    </div>
-    <div id="headerRight">
+    
+    
     <a href="userhome.php">Dashboard</a> 
-    </div>
+    
 </h1>
 </div>
 

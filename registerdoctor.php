@@ -63,11 +63,11 @@ Doctor Register</h1>
 
 <div class="form-group">
 <label> PASSWORD * </label>
-<input name="password" type="password" placeholder="PASSWORD" id="password" required><br>
+<input name="password" type="password" placeholder="PASSWORD" id="password1" required><br>
 </div>
 <div class="form-group">
 <label> RE-TYPE PASSWORD * </label>
-<input name="password_confirm" type="password" placeholder="RE-TYPE PASSWORD" id="password" required><br>
+<input name="password_confirm" type="password" placeholder="RE-TYPE PASSWORD" id="password2" required><br>
 </div>
 
 
@@ -77,7 +77,7 @@ Doctor Register</h1>
 </div>
 <div class="form-group">
 
-<label for="gender"> GENDER *</label><br>
+<label for="gender" id="gender"> GENDER *</label><br>
 <select name="gender">
 	<option value="none" selected>Gender</option>
 	<option value="male">Male</option>
@@ -92,6 +92,7 @@ Doctor Register</h1>
 </form>
 </div>
           </div>
+</div>
 <footer>
     <p>ICS0008 Project</p>
 </footer>

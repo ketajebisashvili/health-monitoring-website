@@ -64,11 +64,11 @@ User Register</h1>
 
 <div class="form-group">
 <label> PASSWORD * </label>
-<input name="password" type="password" placeholder="PASSWORD" id="password" required><br>
+<input name="password" type="password" placeholder="PASSWORD" id="password1" required><br>
 </div>
 <div class="form-group">
 <label> RE-TYPE PASSWORD * </label>
-<input name="password_confirm" type="password" placeholder="RE-TYPE PASSWORD" id="password" required><br>
+<input name="password_confirm" type="password" placeholder="RE-TYPE PASSWORD" id="password2" required><br>
 </div>
 
 
@@ -79,7 +79,7 @@ User Register</h1>
 <div class="form-group">
 
 <label for="gender"> GENDER *</label>
-<select name="gender">
+<select name="gender" id="gender">
 	<option value="none" selected>Gender</option>
 	<option value="male">Male</option>
 	<option value="female">Female</option>
@@ -94,6 +94,7 @@ User Register</h1>
 </div>
 </div>
 </div>
+
 <footer>
     <p>ICS0008 Project</p>
 </footer>
