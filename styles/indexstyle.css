@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+@media screen {
+    body {
+        background: #C8C8C8 scroll no-repeat left top;
+        background-image: url("/img/background.jpg");
+        color: black;
+        font-size: 20px;
+        background-size: cover;
+    } 
+}
+
+@media print {
+    body {
+        background-color: white;
+        background-image: none;
+        color:black;
+    }
+    header {
+        display: none;
+    }
+}
+
+  .top_nav
+  {
+      overflow: hidden;
+    background-color: #37B7A6;
+    color:white;
+  }
+  
+  .top_nav a
+{
+  color:white;
+  
+}
+.top_nav ul
+{
+   list-style-type: none;
+  overflow-x:hidden;
+   
+  
+}
+.top_nav li
+{
+  display:inline; 
+  margin-right: 0.5em;
+}
+
+.left
+{
+    float: left;
+     text-align: center;
+}
+
+.right
+{
+ float: right;
+   text-align: center;
+   margin-right: 20px;
+}
+
+.bottom_nav ul
+{
+   float: right;
+  
+  list-style-type: none;
+  overflow-x:hidden;
+   margin-right: 70px;
+  margin-top:35px;
+}
+.bottom_nav li
+{
+    
+  display:inline; 
+   font-weight: bold;
+  color:#696969;
+    margin-right: 20px;
+  margin-top: 60px;
+   
+ 
+}
+.logo
+{
+  float:left;
+  margin-top:35px;
+  margin-bottom:35px;
+ 
+}
+
+a
+{
+  text-decoration: none;
+  color: inherit;
+}
+
+.bottom_nav li:first-child{
+  color:green;
+}
+ 
+.bottom_nav{
+   height: 100px;
+    background: rgba(0, 151, 19, 0.1);
+  text-align: center;
+ 
+}
+
+h1{
+  text-align:right;
+  margin-right:400px;
+}
+
+p{
+  text-align:right;
+  margin-right:400px;
+}
+
+.btn1{
+ 
+  margin-left:950px;
+  background-color: #0C8FB2; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight:bold;
+}
+
+.btn2{
+    
+margin-left:50px;
+ 
+  background-color: transparent; 
+  border: solid #0C8FB2;
+border-width: 1 1px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight:bold;
+}
+
+footer {
+    background-color: black;
+    bottom: 0;
+    color: white; 
+    font-size: 10px;
+    height: 25px;
+    line-height: 25px;
+    position: fixed;
+    text-align: right;
+    vertical-align: middle;
+    width: 100%;
+}
+
+footer p {
+    margin: 0 10px 0 0;
+}
