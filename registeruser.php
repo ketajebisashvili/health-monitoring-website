@@ -5,6 +5,7 @@
         <meta name="author" content="Group:404NotFound">
         <title>Health Monitoring Website</title>
         <link rel="stylesheet" href="styles/prelogin.css">
+        <script src="js/uservalidate.js"></script>
     </head>
     <body>
     <link 
@@ -35,7 +36,7 @@
 
 User Register</h1>
 
-<form action='/~kejebi/webtechproject/registeruser.php' method="POST">
+<form action='/~kejebi/webtechproject/registeruser.php' method="POST" onsubmit='return validateForm()'>
 
 
 <div class="form-group">
@@ -90,6 +91,7 @@ User Register</h1>
                 <input type="submit" class="btn btn-primary" value="Submit">
                 </div>
                 <p>Already have an account? <a href="signin.php">Sign in here</a>.</p>
+                <p id = "registerAlert"></p>
 </form>
 </div>
 </div>

@@ -34,7 +34,7 @@
  <div class="bottom_nav">
    
    <div class="logo">
-   <img src="/img/logo.png" alt="logo" width="100px">
+   <img src="img/logo.jpg" alt="logo" width="100px">
    </div>
 
    
