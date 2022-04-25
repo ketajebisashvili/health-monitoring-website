@@ -1,3 +1,223 @@
+<?php
+// Include config file
+require_once "config.php";
+ 
+// Define variables and initialize with empty values
+ $did =$username = $password = $did = $gender  = $address = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+ 
+    // Validate username
+    if(empty(trim($_POST["name"]))){
+        $username_err = "Please enter a username.";
+    } else{
+        // Prepare a select statement
+        $sql = "SELECT doctorid FROM doctor WHERE username = ?";
+        $sql2 = "SELECT id FROM user WHERE username = ?";
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_username);
+            
+            // Set parameters
+            $param_username = trim($_POST["name"]);
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                /* store result */
+                mysqli_stmt_store_result($stmt);
+                
+                if(mysqli_stmt_num_rows($stmt) >= 1){
+                    $username_err = "This username is already taken.";
+                } else{
+                    $username = trim($_POST["name"]);
+                }
+            } else{
+                echo "Oops! Something went wrong. Please try again later. username";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+
+        if($stmt = mysqli_prepare($link, $sql2)){
+          // Bind variables to the prepared statement as parameters
+          mysqli_stmt_bind_param($stmt, "s", $param_username);
+          
+          // Set parameters
+          $param_username = trim($_POST["name"]);
+          
+          // Attempt to execute the prepared statement
+          if(mysqli_stmt_execute($stmt)){
+              /* store result */
+              mysqli_stmt_store_result($stmt);
+              
+              if(mysqli_stmt_num_rows($stmt) >= 1){
+                  $username_err = "This username is already taken.";
+              } else{
+                  $username = trim($_POST["name"]);
+              }
+          } else{
+              echo "Oops! Something went wrong. Please try again later. username";
+          }
+
+          // Close statement
+          mysqli_stmt_close($stmt);
+      }
+
+
+
+
+
+
+
+
+
+    }
+    
+    // Validate did
+    if(empty(trim($_POST["did"]))){
+        $did_err = "Please enter an did.";
+    } else{
+        // Prepare a select statement
+        $sql = "SELECT doctorid FROM doctor WHERE doctorid = ?";
+        
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_did);
+            
+            // Set parameters
+            $param_did = trim($_POST["did"]);
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                /* store result */
+                mysqli_stmt_store_result($stmt);
+                
+                if(mysqli_stmt_num_rows($stmt) >= 1){
+                    $did_err = "This did is already taken.";
+                } else{
+                    $did = trim($_POST["did"]);
+                }
+            } else{
+                echo "Oops! Something went wrong. Please try again later. did";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+
+
+    // Validate email
+
+  if(empty(trim($_POST["email"]))){
+    $email_err = "Please enter an email.";
+} else{
+    // Prepare a select statement
+    $sql = "SELECT doctorid FROM doctor WHERE email = ?";
+    $sql2 = "SELECT id FROM user WHERE email = ?";
+    if($stmt = mysqli_prepare($link, $sql)){
+        // Bind variables to the prepared statement as parameters
+        mysqli_stmt_bind_param($stmt, "s", $param_email);
+        
+        // Set parameters
+        $param_email = trim($_POST["email"]);
+        
+        // Attempt to execute the prepared statement
+        if(mysqli_stmt_execute($stmt)){
+            /* store result */
+            mysqli_stmt_store_result($stmt);
+            
+            if(mysqli_stmt_num_rows($stmt) >= 1){
+                $email_err = "This email is already taken.";
+            } else{
+                $email = trim($_POST["email"]);
+            }
+        } else{
+            echo "Oops! Something went wrong. Please try again later. email";
+        }
+
+        // Close statement
+        mysqli_stmt_close($stmt);
+    }
+    
+
+    if($stmt = mysqli_prepare($link, $sql2)){
+      // Bind variables to the prepared statement as parameters
+      mysqli_stmt_bind_param($stmt, "s", $param_email);
+      
+      // Set parameters
+      $param_email = trim($_POST["email"]);
+      
+      // Attempt to execute the prepared statement
+      if(mysqli_stmt_execute($stmt)){
+          /* store result */
+          mysqli_stmt_store_result($stmt);
+          
+          if(mysqli_stmt_num_rows($stmt) >= 1){
+              $email_err = "This email is already taken.";
+          } else{
+              $email = trim($_POST["email"]);
+          }
+      } else{
+          echo "Oops! Something went wrong. Please try again later. email";
+      }
+
+      // Close statement
+      mysqli_stmt_close($stmt);
+  }
+
+
+
+
+}
+
+
+
+   
+
+    
+    
+    // Check input errors before inserting in database
+    if(empty($username_err) && empty($email_err) && empty($did_err)){
+        
+        // Prepare an insert statement
+        $sql = "INSERT INTO doctor (doctorid, username, email, password, address, gender) VALUES (?, ?, ?, ?, ?, ?)";
+         
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "isssss",  $did, $username, $email, $param_password, $address, $gender);
+            
+            // Set parameters
+            $username = $_POST['name'];
+            $did = $_POST['did'];
+            $gender = $_POST['gender'];
+            $password = $_POST['password'];
+            $email = $_POST['email'];
+            $address = $_POST['address'];
+            $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                // Redirect to login page
+                header("location: login.php");
+            } else{
+                echo "Oops! Something went wrong. Please try again later. entering";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+    
+    // Close connection
+    mysqli_close($link);
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -85,8 +305,8 @@ Doctor Register</h1>
 </div>
 <div class="form-group">
 
-<label for="gender" id="gender"> GENDER *</label><br>
-<select name="gender">
+<label for="gender"> GENDER *</label>
+<select name="gender" id="gender">
 	<option value="none" selected>Gender</option>
 	<option value="male">Male</option>
 	<option value="female">Female</option>
