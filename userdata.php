@@ -1,3 +1,64 @@
+<?php
+// Include config file
+require_once "config.php";
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+
+
+
+ 
+
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+ 
+// Define variables and initialize with empty values
+$did = $uid = $temperature = $pulse = $sugar  = $datadate =  $pressure = $datadate = "";
+   
+        
+        // Prepare an insert statement
+        $sql = "INSERT INTO data (userid, doctorid, date, temperature, pulse, sugar, blood_pressure) VALUES (?, ?, ?, ?, ?, ?, ?)";
+         
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "iisdddd",  $uid, $did, $datadate, $temperature, $pulse, $sugar, $pressure);
+            
+            // Set parameters
+            $uid = $_SESSION["id"];
+            $did = $_POST['did'];
+            $temperature = $_POST['temperature'];
+            $pulse = $_POST['pulse'];
+            $sugar = $_POST['sugar'];
+            $datadate = $_POST['datadate'];
+            $pressure = $_POST['pressure'];
+            
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                // Redirect to login page
+                header("location: userhome.php");
+            } else{
+                echo "Oops! Something went wrong. Please try again later. entering";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    
+    
+    // Close connection
+    mysqli_close($link);
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>

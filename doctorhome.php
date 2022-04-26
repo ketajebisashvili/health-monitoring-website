@@ -28,14 +28,14 @@
         <aside id="sidebar">
                 <ul id="sidemenu" class="sidebar-nav">
                     <li>
-                        <a href="/doctorhome.php" class="active">
+                        <a href="doctorhome.php" class="active">
                             <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span>
                             <span class="sidebar-title">Dashboard</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="/doctordata.php" class="active">
+                        <a href="doctordata.php" class="active">
                             <span class="sidebar-icon"><i class="fa fa-pencil-square-o"></i></span>
                             <span class="sidebar-title">Shared Data</span>
                         </a>
@@ -53,7 +53,7 @@
 
     </div>
     
-<div id="content">
+<div id="welcomedoctor">
    <p> welcome doctor! </p>
 </div>
 

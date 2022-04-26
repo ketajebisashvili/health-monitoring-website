@@ -281,12 +281,7 @@ Doctor Register</h1>
        
 </div>
 
-<div class="form-group">
-<label> MOBILE NUMBER * </label>
 
-<input name="phone" type="text" placeholder="PHONE NUMBER" id="phone"> <br>
-       
-</div>
 
 
 <div class="form-group">

@@ -1,7 +1,6 @@
 function validateForm(){
     var username = document.getElementById("name").value;
     var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
     var password1 = document.getElementById("password1").value;
     var password2 = document.getElementById("password2").value;
     var address = document.getElementById("address").value;
@@ -19,18 +18,13 @@ function validateForm(){
         document.getElementById("registerAlert").innerHTML = "<b>Passwords don't match!</b>";
         return false;
     }
-    var validRegex = /^(?:\+?\d{2}[ -]?[\d -][\d -]+)$/;
+    var validRegex = /\S+@\S+\.\S+/;
     if (!email.match(validRegex))
     {
         document.getElementById("registerAlert").innerHTML = "<b>Please enter valid email address!</b>";
         return false;
     }
-    var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
-    if (!phone.match(re))
-    {
-        document.getElementById("registerAlert").innerHTML = "<b>Please enter valid phone number!</b>";
-        return false;
-    }
+  
     if(!(gender == "male" || gender == "female" || gender == "other")){
         document.getElementById("registerAlert").innerHTML = "<b>Please select your gender!</b>";
         return false;

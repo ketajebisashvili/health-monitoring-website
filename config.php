@@ -1,7 +1,7 @@
 <?php
 /* Database credentials. */
 define('DB_SERVER', 'anysql.itcollege.ee');
-define('DB_USERNAME', 'ICS0008_22');
+define('DB_USERNAME', 'ICS0008_WT_22');
 define('DB_PASSWORD', '36d20eb6edc0');
 define('DB_NAME', 'ICS0008_22');
 

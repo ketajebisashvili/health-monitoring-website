@@ -57,4 +57,3 @@ function isValidDate(dateString) {
     if(!dNum && dNum !== 0) return false; // NaN value, Invalid date
     return d.toISOString().slice(0,10) === dateString;
   }
-  
